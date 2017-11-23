@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
 		if(FD_ISSET(connfd,&read_fds))
 		{
 			ret = recv(connfd,buf,sizeof(buf)-1,0);
-			if(ret < 0)
+			if(ret <= 0)
 				break;
 			printf("get %d bytes of normal data: %s\n",ret,buf);
 		}
