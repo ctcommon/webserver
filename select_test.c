@@ -66,7 +66,9 @@ int main(int argc, char* argv[])
 		{
 			ret = recv(connfd,buf,sizeof(buf)-1,0);
 			if(ret <= 0)
+			{
 				break;
+			}
 			printf("get %d bytes of normal data: %s\n",ret,buf);
 		}
 		/*对于异常事件，采用带MSG_OOB标志的recv函数读取带外数据*/
@@ -74,7 +76,9 @@ int main(int argc, char* argv[])
 		{
 			ret = recv(connfd,buf,sizeof(buf)-1,MSG_OOB);
 			if(ret <= 0)
+			{
 				break;
+			}
 			printf("get %d bytes of oob data: %s\n",ret,buf);
 		}
 	}
