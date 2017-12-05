@@ -248,7 +248,7 @@ void processpool<T>::run_child()
 					struct sockaddr_in client_address;
 					socklen_t client_addrlength = sizeof(client_address);
 					int connfd = accept(m_listenfd,(struct sockaddr*)&client_address,
-															&client_addrlength);
+							    &client_addrlength);
 					if(connfd < 0)
 					{
 						printf("errno is: %d\n",errno);
@@ -391,8 +391,8 @@ void processpool<T>::run_parent()
 								{
 									for(int i=0; i<m_process_number; i++)
 									{
-										/*如果进程池中第i个子进程退出了，则主进程关闭相应的通信管
-										 * 道，并设置相应的m_pid为-1，以标记该子进程已经退出*/
+									/*如果进程池中第i个子进程退出了，则主进程关闭相应的通信管
+									* 道，并设置相应的m_pid为-1，以标记该子进程已经退出*/
 										if(m_sub_process[i].m_pid == pid)
 										{
 											printf("child %d join\n",i);
