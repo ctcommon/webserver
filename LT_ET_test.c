@@ -47,8 +47,7 @@ void LT(epoll_event* events, int number, int epollfd, int listenfd)
 		{
 			struct sockaddr_in client;
 			socklen_t client_addrlength = sizeof(client);
-			int connfd = accept(listenfd,(struct sockaddr*)&client,
-													&client_addrlength);
+			int connfd = accept(listenfd,(struct sockaddr*)&client,&client_addrlength);
 			addfd(epollfd,connfd,false);  //对connfd禁用ET模式
 		}
 		else if(events[i].events & EPOLLIN)
@@ -81,8 +80,7 @@ void ET(epoll_event* events, int number, int epollfd, int listenfd)
 		{
 			struct sockaddr_in client;
 			socklen_t client_addrlength = sizeof(client);
-			int connfd = accept(listenfd,(struct sockaddr*)&client,
-												&client_addrlength);
+			int connfd = accept(listenfd,(struct sockaddr*)&client,&client_addrlength);
 			addfd(epollfd,connfd,true); /*对connfd开启ET模式*/
 		}
 		else if(events[i].events & EPOLLIN)
