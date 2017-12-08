@@ -135,8 +135,7 @@ int main(int argc, char* argv[])
 			{
 				struct sockaddr_in client;
 				socklen_t client_addrlength = sizeof(client);
-				int connfd = accept(listenfd,(struct sockaddr*)&client
-														,&client_addrlength);
+				int connfd = accept(listenfd,(struct sockaddr*)&client,&client_addrlength);
 				/*对每个非监听文件描述符都注册EPOLLONESHOT事件*/
 				addfd(epollfd,connfd,true);
 			}
