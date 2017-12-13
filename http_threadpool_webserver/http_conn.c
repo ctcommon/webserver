@@ -139,8 +139,7 @@ bool http_conn::read()
 	int bytes_read = 0;
 	while(true)
 	{
-		bytes_read = recv(m_sockfd, m_read_buf+m_read_idx, READ_BUFFER_SIZE-
-												m_read_idx, 0);
+		bytes_read = recv(m_sockfd, m_read_buf+m_read_idx, READ_BUFFER_SIZE-m_read_idx, 0);
 		if(bytes_read == -1)
 		{
 			if(errno == EAGAIN || errno==EWOULDBLOCK)
@@ -341,8 +340,7 @@ http_conn::HTTP_CODE http_conn::do_request()
 	}
 
 	int fd = open(m_real_file, O_RDONLY);
-	m_file_address = (char*)mmap(0,m_file_stat.st_size, PROT_READ,MAP_PRIVATE,
-										fd,0);
+	m_file_address = (char*)mmap(0,m_file_stat.st_size, PROT_READ,MAP_PRIVATE,fd,0);
 	close(fd);
 	return FILE_REQUEST;
 }
@@ -415,8 +413,7 @@ bool http_conn::add_response(const char* format,...)
 	}
 	va_list arg_list;
 	va_start(arg_list, format);
-	int len = vsnprintf(m_write_buf + m_write_idx, WRITE_BUFFER_SIZE-1-
-											m_write_idx, format, arg_list);
+	int len = vsnprintf(m_write_buf + m_write_idx, WRITE_BUFFER_SIZE-1-m_write_idx, format, arg_list);
 	if(len >= (WRITE_BUFFER_SIZE-1-m_write_idx))
 	{
 		return false;

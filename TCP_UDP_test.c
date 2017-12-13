@@ -97,8 +97,7 @@ int main(int argc, char* argv[])
 			{
 				struct sockaddr_in client_address;
 				socklen_t client_addrlength = sizeof(client_address);
-				int connfd = accept(listenfd,(struct sockaddr*)&client_address,
-														&client_addrlength);
+				int connfd = accept(listenfd,(struct sockaddr*)&client_address,&client_addrlength);
 				addfd(epollfd, connfd);
 			}
 			else if(sockfd == udpfd)
@@ -108,12 +107,10 @@ int main(int argc, char* argv[])
 				struct sockaddr_in client_address;
 				socklen_t client_addrlength = sizeof(client_address);
 
-				ret = recvfrom(udpfd,buf,UDP_BUFFER_SIZE-1,0,
-											(struct sockaddr*)&client_address,&client_addrlength);
+				ret = recvfrom(udpfd,buf,UDP_BUFFER_SIZE-1,0,(struct sockaddr*)&client_address,&client_addrlength);
 				if(ret > 0)
 				{
-					sendto(udpfd,buf,UDP_BUFFER_SIZE-1,0,
-									(struct sockaddr*)&client_address,client_addrlength);
+					sendto(udpfd,buf,UDP_BUFFER_SIZE-1,0,(struct sockaddr*)&client_address,client_addrlength);
 				}
 			}
 			else if(events[i].events & EPOLLIN)

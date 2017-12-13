@@ -108,8 +108,7 @@ int main(int argc, char* argv[])
 			{
 				struct sockaddr_in client_address;
 				socklen_t client_addrlength = sizeof(client_address);
-				int connfd = accept(listenfd,(struct sockaddr*)&client_address,
-															&client_addrlength);
+				int connfd = accept(listenfd,(struct sockaddr*)&client_address,&client_addrlength);
 				if(connfd < 0)
 				{
 					printf("errno is: %d\n",errno);
