@@ -1,7 +1,4 @@
-/* 
- * Copyright, TeeKee
- * Date, 2017.7.20
- */
+
 
 #include "priority_queue.h"
 
