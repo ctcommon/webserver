@@ -1,7 +1,4 @@
-/* 
- * Copyright, TeeKee
- * Date, 2017.7.20
- */
+
 
 #ifndef PRIORITY_QUEUE_H
 #define PRIORITY_QUEUE_H
