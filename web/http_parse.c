@@ -1,6 +1,5 @@
-//
-// Latest edit by TeeKee on 2017/7/23.
-//
+
+
 
 #include "http.h"
 
