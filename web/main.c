@@ -1,6 +1,4 @@
-//
-// Latest edit by TeeKee on 2017/7/23.
-//
+
 
 // 系统头文件
 #include <stdio.h>
