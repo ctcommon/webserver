@@ -1,6 +1,4 @@
-//
-// Latest edit by TeeKee on 2017/7/26.
-//
+
 
 #ifndef THREADPOOL_H
 #define THREADPOOL_H
