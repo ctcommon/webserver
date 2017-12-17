@@ -1,6 +1,4 @@
-//
-// Latest edit by TeeKee on 2017/7/26.
-//
+
 
 
 #include "threadpool.h"

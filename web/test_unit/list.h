@@ -1,7 +1,4 @@
-/* 
- * Copyright, TeeKee
- * Date, 2017.7.20
- */
+
 
 #ifndef TK_LIST_H
 #define TK_LIST_H

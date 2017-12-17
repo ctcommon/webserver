@@ -1,6 +1,4 @@
-//
-// Latest edit by TeeKee on 2017/7/23.
-//
+
 
 #ifndef PRIORITY_QUEUE_H
 #define PRIORITY_QUEUE_H

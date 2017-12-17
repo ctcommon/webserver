@@ -1,6 +1,4 @@
-//
-// Latest edit by TeeKee on 2017/7/23.
-//
+
 
 #ifndef _GNU_SOURCE
 #define _GNU_SOURCE

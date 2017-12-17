@@ -1,13 +1,11 @@
-//
-// Latest edit by TeeKee on 2017/7/23.
-//
+
 
 // 系统头文件
 #include <stdio.h>
 #include "threadpool.h"
 #include "http.h"
 
-#define DEFAULT_CONFIG "tkeed.conf"
+#define DEFAULT_CONFIG "ctcommon.conf"
 
 extern struct epoll_event *events;
 char *conf_file = DEFAULT_CONFIG;

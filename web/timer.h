@@ -1,6 +1,4 @@
-//
-// Latest edit by TeeKee on 2017/7/23.
-//
+
 
 #ifndef TK_TIMER_H
 #define TK_TIMER_H

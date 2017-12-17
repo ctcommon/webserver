@@ -1,6 +1,4 @@
-//
-// Latest edit by TeeKee on 2017/7/23.
-//
+
 
 #ifndef TK_LIST_H
 #define TK_LIST_H
