@@ -5,7 +5,7 @@
 #include "threadpool.h"
 #include "http.h"
 
-#define DEFAULT_CONFIG "tkeed.conf"
+#define DEFAULT_CONFIG "ctcommon.conf"
 
 extern struct epoll_event *events;
 char *conf_file = DEFAULT_CONFIG;
